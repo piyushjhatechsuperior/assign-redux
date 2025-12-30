@@ -10,7 +10,6 @@ import {
   updateQuantity,
   removeFromCart,
 } from "@/lib/slices/cartSlice";
-import Navbar from "@/components/Navbar";
 
 export default function ProductDetailsPage() {
   const params = useParams();
@@ -57,7 +56,6 @@ export default function ProductDetailsPage() {
   if (loading) {
     return (
       <div className="min-h-screen bg-gray-50">
-        <Navbar />
         <div className="flex justify-center items-center py-20">
           <div className="text-lg text-gray-600">Loading product...</div>
         </div>
@@ -68,7 +66,6 @@ export default function ProductDetailsPage() {
   if (!product) {
     return (
       <div className="min-h-screen bg-gray-50">
-        <Navbar />
         <div className="flex justify-center items-center py-20">
           <div className="text-red-600">Product not found</div>
         </div>
@@ -78,7 +75,6 @@ export default function ProductDetailsPage() {
 
   return (
     <div className="min-h-screen bg-gray-50">
-      <Navbar />
       <main className="container mx-auto px-4 py-8">
         <h1 className="text-4xl font-bold text-center mb-8 text-gray-900">
           Items Details Page

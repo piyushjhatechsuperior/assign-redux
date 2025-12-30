@@ -4,7 +4,6 @@ import { useEffect } from 'react';
 import { useRouter } from 'next/navigation';
 import Link from 'next/link';
 import { useAppSelector } from '@/lib/hooks';
-import Navbar from '@/components/Navbar';
 import CartItem from '@/components/CartItem';
 
 export default function CartPage() {
@@ -30,7 +29,6 @@ export default function CartPage() {
 
   return (
     <div className="min-h-screen bg-gray-50">
-      <Navbar />
       <main className="container mx-auto px-4 py-8">
         <h1 className="text-4xl font-bold text-center mb-8 text-gray-900">
           Shopping Cart

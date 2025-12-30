@@ -4,7 +4,6 @@ import { useEffect } from 'react';
 import { useRouter } from 'next/navigation';
 import { useAppSelector, useAppDispatch } from '@/lib/hooks';
 import { clearCart } from '@/lib/slices/cartSlice';
-import Navbar from '@/components/Navbar';
 
 export default function CheckoutPage() {
   const router = useRouter();
@@ -28,7 +27,6 @@ export default function CheckoutPage() {
   );
 
   const handlePlaceOrder = () => {
-    // In a real app, this would process the payment and create an order
     alert('Order placed successfully!');
     dispatch(clearCart());
     router.push('/');
@@ -37,7 +35,6 @@ export default function CheckoutPage() {
   if (cartItems.length === 0) {
     return (
       <div className="min-h-screen bg-gray-50">
-        <Navbar />
         <div className="container mx-auto px-4 py-12">
           <div className="bg-white rounded-lg shadow-lg p-12 text-center">
             <p className="text-gray-600 text-lg mb-4">Your cart is empty</p>
@@ -55,7 +52,6 @@ export default function CheckoutPage() {
 
   return (
     <div className="min-h-screen bg-gray-50">
-      <Navbar />
       <main className="container mx-auto px-4 py-8">
         <h1 className="text-4xl font-bold text-center mb-8 text-gray-900">
           Checkout

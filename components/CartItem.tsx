@@ -27,7 +27,7 @@ export default function CartItem({ item }: CartItemProps) {
   return (
     <div className="grid grid-cols-12 gap-4 p-4 border-b border-gray-200 items-center">
       <div className="col-span-3">
-        <div className="relative w-20 h-20 bg-gray-100 rounded flex-shrink-0">
+        <div className="relative w-20 h-20 bg-gray-100 rounded shrink-0">
           <Image
             src={item.product.image}
             alt={item.product.title}
@@ -53,7 +53,7 @@ export default function CartItem({ item }: CartItemProps) {
                   >
                     -
                   </button>
-                  <span className="px-4 py-1 min-w-[3rem] text-center">
+                  <span className="px-4 py-1 min-w-12 text-center">
                     {item.quantity}
                   </span>
                   <button

@@ -1,12 +1,16 @@
-'use client';
+"use client";
 
-import { useEffect } from 'react';
-import { useParams, useRouter } from 'next/navigation';
-import Image from 'next/image';
-import { useAppSelector, useAppDispatch } from '@/lib/hooks';
-import { fetchProducts } from '@/lib/slices/productsSlice';
-import { addToCart, updateQuantity, removeFromCart } from '@/lib/slices/cartSlice';
-import Navbar from '@/components/Navbar';
+import { useEffect } from "react";
+import { useParams, useRouter } from "next/navigation";
+import Image from "next/image";
+import { useAppSelector, useAppDispatch } from "@/lib/hooks";
+import { fetchProducts } from "@/lib/slices/productsSlice";
+import {
+  addToCart,
+  updateQuantity,
+  removeFromCart,
+} from "@/lib/slices/cartSlice";
+import Navbar from "@/components/Navbar";
 
 export default function ProductDetailsPage() {
   const params = useParams();
@@ -14,7 +18,9 @@ export default function ProductDetailsPage() {
   const dispatch = useAppDispatch();
   const productId = parseInt(params.id as string);
 
-  const { items: products, loading } = useAppSelector((state) => state.products);
+  const { items: products, loading } = useAppSelector(
+    (state) => state.products
+  );
   const { items: cartItems } = useAppSelector((state) => state.cart);
   const { isAuthenticated } = useAppSelector((state) => state.auth);
 
@@ -30,8 +36,8 @@ export default function ProductDetailsPage() {
 
   const handleAddToCart = () => {
     if (!isAuthenticated) {
-      alert('Please login to add items to cart');
-      router.push('/login');
+      alert("Please login to add items to cart");
+      router.push("/login");
       return;
     }
     if (product) {
@@ -189,4 +195,3 @@ export default function ProductDetailsPage() {
     </div>
   );
 }
-

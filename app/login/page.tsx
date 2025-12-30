@@ -4,7 +4,6 @@ import { useState, useEffect } from "react";
 import { useRouter } from "next/navigation";
 import { useAppSelector, useAppDispatch } from "@/lib/hooks";
 import { login } from "@/lib/slices/authSlice";
-import Navbar from "@/components/Navbar";
 import Link from "next/link";
 
 export default function LoginPage() {
@@ -49,7 +48,6 @@ export default function LoginPage() {
   const handleSubmit = (e: React.FormEvent) => {
     e.preventDefault();
 
-    // Validate all fields
     const emailError = validateEmail(email);
     const passwordError = validatePassword(password);
 
@@ -58,12 +56,10 @@ export default function LoginPage() {
       password: passwordError,
     });
 
-    // If any errors, don't submit
     if (emailError || passwordError) {
       return;
     }
 
-    // Simple validation - in a real app, this would be an API call
     dispatch(login({ email }));
     router.push("/");
   };
@@ -87,7 +83,6 @@ export default function LoginPage() {
 
   return (
     <div className="min-h-screen bg-gray-50">
-      <Navbar />
       <main className="container mx-auto px-4 py-12">
         <div className="max-w-md mx-auto bg-white rounded-lg shadow-lg p-8">
           <h1 className="text-3xl font-bold text-center mb-8 text-gray-900">

@@ -21,9 +21,6 @@ export default function Navbar() {
     <nav className="bg-gray-800 text-white px-6 py-4 flex justify-between items-center">
       <div className="flex items-center gap-6">
         <Link href="/" className="hover:text-gray-300 transition-colors">
-          Add to Cart
-        </Link>
-        <Link href="/" className="hover:text-gray-300 transition-colors">
           Home
         </Link>
       </div>

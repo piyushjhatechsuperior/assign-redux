@@ -105,7 +105,7 @@ const categories = [
 export default function BlogPage() {
   return (
     <div className="min-h-screen bg-gray-50">
-      <div className="bg-gradient-to-r from-blue-600 to-purple-600 text-white py-16">
+      <div className="bg-gradient-to-r bg-gray-600 text-white py-16">
         <div className="container mx-auto px-4">
           <h1 className="text-4xl md:text-5xl font-bold mb-4">ShopHub Blog</h1>
           <p className="text-xl text-blue-100">
@@ -218,7 +218,7 @@ export default function BlogPage() {
         </section>
 
         <section
-          className="mt-16 bg-gradient-to-r from-blue-600 to-purple-600 text-white rounded-lg p-12 text-center"
+          className="mt-16 bg-gradient-to-r bg-gray-600 text-white rounded-lg p-12 text-center"
           aria-labelledby="newsletter-heading"
         >
           <h2 id="newsletter-heading" className="text-3xl font-bold mb-4">

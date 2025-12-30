@@ -30,7 +30,7 @@ export default function Home() {
   return (
     <div className="min-h-screen bg-gray-50">
       <section
-        className="bg-linear-to-r from-blue-600 to-purple-600 text-white py-20"
+        className="bg-linear-to-r bg-gray-600 text-white py-20"
         aria-labelledby="hero-heading"
       >
         <div className="container mx-auto px-4">
@@ -221,7 +221,7 @@ export default function Home() {
       </section>
 
       <section
-        className="py-20 bg-linear-to-r from-purple-600 to-blue-600 text-white"
+        className="py-20 bg-linear-to-r bg-gray-600 text-white"
         aria-labelledby="cta-heading"
       >
         <div className="container mx-auto px-4 text-center">

@@ -126,7 +126,7 @@ export default function Footer() {
               </li>
               <li>
                 <Link
-                  href="/faq"
+                  href="/products"
                   className="hover:text-white transition-colors text-sm"
                 >
                   FAQ
@@ -134,7 +134,7 @@ export default function Footer() {
               </li>
               <li>
                 <Link
-                  href="/shipping"
+                  href="/products"
                   className="hover:text-white transition-colors text-sm"
                 >
                   Shipping Info
@@ -142,7 +142,7 @@ export default function Footer() {
               </li>
               <li>
                 <Link
-                  href="/returns"
+                  href="/products"
                   className="hover:text-white transition-colors text-sm"
                 >
                   Returns Policy
@@ -150,7 +150,7 @@ export default function Footer() {
               </li>
               <li>
                 <Link
-                  href="/privacy"
+                  href="/products"
                   className="hover:text-white transition-colors text-sm"
                 >
                   Privacy Policy

@@ -13,7 +13,7 @@ export const metadata: Metadata = {
 export default function AboutPage() {
   return (
     <div className="min-h-screen bg-gray-50">
-      <div className="bg-gradient-to-r from-blue-600 to-purple-600 text-white py-16">
+      <div className="bg-gradient-to-r bg-gray-600 text-white py-16">
         <div className="container mx-auto px-4">
           <h1 className="text-4xl md:text-5xl font-bold mb-4">About ShopHub</h1>
           <p className="text-xl text-blue-100">
@@ -196,7 +196,7 @@ export default function AboutPage() {
         </section>
 
         <section
-          className="bg-gradient-to-r from-blue-600 to-purple-600 text-white rounded-lg p-12"
+          className="bg-gradient-to-r bg-gray-600 text-white rounded-lg p-12"
           aria-labelledby="stats-heading"
         >
           <h2 id="stats-heading" className="sr-only">

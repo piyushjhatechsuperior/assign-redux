@@ -5,8 +5,9 @@ import { useSearchParams } from "next/navigation";
 import { useAppSelector, useAppDispatch } from "@/lib/hooks";
 import { fetchProducts } from "@/lib/slices/productsSlice";
 import ProductCard from "@/components/ProductCard";
+import { Suspense } from "react";
 
-export default function ProductsPage() {
+function ProductsContent() {
   const dispatch = useAppDispatch();
   const searchParams = useSearchParams();
   const category = searchParams.get("category");
@@ -51,5 +52,21 @@ export default function ProductsPage() {
         )}
       </main>
     </div>
+  );
+}
+
+export default function ProductsPage() {
+  return (
+    <Suspense
+      fallback={
+        <div className="min-h-screen bg-gray-50">
+          <div className="flex justify-center items-center py-20">
+            <div className="text-lg text-gray-600">Loading...</div>
+          </div>
+        </div>
+      }
+    >
+      <ProductsContent />
+    </Suspense>
   );
 }
